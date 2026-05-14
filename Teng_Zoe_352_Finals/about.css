@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #130f0e;
+  --pink: #bb6e7c;
+  --whitish: #ede9e6;
+  --pink-red: #49111C;
+  --pink-pink: #70323d;
+  --shadow: rgba(26, 18, 8, 0.15);
+}
+
+body {
+  background-color: var(--whitish);
+  color: var(--black);
+  font-family: "Playfair Display", serif;
+}
+
+/* The Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border-bottom: 1px solid var(--pink-red);
+  background-color: var(--black);
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: right;
+  align-items: left;
+  overflow: hidden;
+}
+
+#logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  color: var(--whitish);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navigation a:hover {
+  color: var(--pink);
+}
+
+.empty-spaces {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.introduction{
+    text-align: Left;
+    padding: 20px 50px;
+}
+
+.introduction img {
+  width: 50%;
+  height: 20%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5%;
+  margin: 0 auto 20px;
+}
+
+.ntroduction h1{
+    color: var(--pink-red);
+}
+
+.introduction p{
+    color: var(--pink-pink);
+    font-size: large;
+}
+
