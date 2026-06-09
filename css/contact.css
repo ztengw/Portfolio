@@ -10,7 +10,7 @@
   --black: #130f0e;
   --pink: #bb6e7c;
   --whitish: #ede9e6;
-  --pink-red: #49111C;
+  --pink-red: #49111c;
   --pink-pink: #70323d;
   --shadow: rgba(26, 18, 8, 0.15);
 }
@@ -21,14 +21,28 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-/* The Navigation */
+/* Empty spaces on the left and right */
+.empty-spaces {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 140px 0 40px;
+}
+
+/* Navigation */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.67px 30px;
+  padding: 0.67px 50px;
   border-bottom: 1px solid var(--pink-red);
   background-color: var(--black);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 #logo {
@@ -62,44 +76,7 @@ header {
   color: var(--pink);
 }
 
-.empty-spaces {
-  width: 70%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
-.contacts {
-  text-align: left;
-  padding: 20px 50px;
-}
-
-.contact h1{
-     color: var(--pink-red);
-}
-
-.contact-icons {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.contact-icons a {
-  display: block;
-}
-
-.contact-icons img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px;
-  border: 5px solid var(--black);
-}
-
-/* Phone size */
-
+/* Hamburger */
 .hamburger {
   display: none;
   background: transparent;
@@ -111,6 +88,58 @@ header {
   z-index: 2000;
 }
 
+/* Contacts section */
+.contacts {
+  text-align: left;
+  padding: -15px 15px;
+}
+
+.contacts h1 {
+  color: var(--pink-red);
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  display: block;
+  text-decoration: none;
+}
+
+.contact-icons img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 5px solid var(--black);
+  transition: 0.3s;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.06);
+  border-color: var(--pink);
+}
+
+.text {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.text h2 {
+  color: var(--pink-pink);
+  font-size: 42px;
+  line-height: 1.7;
+}
+
+/* Phone size */
 @media (max-width: 700px) {
   header {
     padding: 10px 25px;
@@ -145,56 +174,30 @@ header {
     font-size: 16px;
   }
 
-  .hero-text h1 {
-    font-size: 40px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-
   .empty-spaces {
     width: 90%;
+    padding-top: 120px;
   }
 
-  .project-slideshow-section h4 {
-  width: 90%;
-}
+  .contacts {
+    padding: 20px 0;
+  }
 
-.slide-track {
-  padding: 0 10vw;
-  gap: 14px;
-}
+  .contacts h1 {
+    font-size: 34px;
+  }
 
-.slide-card {
-  flex: 0 0 80vw;
-  height: 300px;
-}
+  .contact-icons {
+    gap: 20px;
+  }
 
-.slide-arrow {
-  width: 42px;
-  height: 42px;
-  font-size: 30px;
-}
+  .contact-icons img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
 
-.slide-prev {
-  left: 12px;
-}
-
-.slide-next {
-  right: 12px;
-}
-
-.slide-text h5 {
-  font-size: 23px;
-}
-
-.slide-text p {
-  font-size: 14px;
-}
-
-.slide-dot {
-  width: 25px;
-}
+  .text p {
+    font-size: 16px;
+  }
 }
